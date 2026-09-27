@@ -10,7 +10,7 @@ phase1_guard() {
 }
 
 install_development() {
-  # TODO: instalar el toolchain después de resolver los TO VERIFY de nombres y de NVM.
+  # TODO: instalar el toolchain después de verificar nombres. Node va por NVM, no por el paquete nodejs del sistema. TypeScript queda por proyecto.
   # No llamar a pacman, systemctl ni escribir fuera del repositorio.
   :
 }

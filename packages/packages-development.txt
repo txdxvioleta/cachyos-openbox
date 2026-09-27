@@ -3,13 +3,17 @@
 # Intención para CachyOS. No es una lista definitiva.
 # Los nombres no están confirmados en los repositorios de CachyOS.
 # No instalar en la fase 1.
-# NVM, Yarn, TypeScript global, Cursor y OpenCode no tienen nombre de paquete especificado: no se listan aquí.
+# Node.js se gestiona con NVM. No listar el paquete nodejs del sistema.
+# npm llega con la versión de Node elegida por NVM.
+# TypeScript se instala por proyecto, no como paquete del sistema.
+# Yarn, Cursor y OpenCode no tienen nombre de paquete especificado: no se listan aquí.
+# Compose: un solo mecanismo moderno. No conservar docker-compose legado y el plugin a la vez.
 
 git
 github-cli
 docker
-docker-compose  # TO VERIFY: en Archcraft el explícito era docker-compose. Confirmar si en CachyOS es ese paquete o el plugin Compose.
-npm  # TO VERIFY: no se asume que reemplace a nodejs ni a NVM. En Archcraft npm era explícito; nodejs no.
+docker-compose  # TO VERIFY: distinguir Docker Engine, Compose moderno, plugin y docker-compose legado. El destino es un solo Compose moderno. En Archcraft el explícito era docker-compose.
+npm  # TO VERIFY: no instalarlo como reemplazo de NVM. npm viene con el Node de NVM. En Archcraft npm era explícito; nodejs no.
 pnpm
 python
 python-pip

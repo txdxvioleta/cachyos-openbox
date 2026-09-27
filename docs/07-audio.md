@@ -38,7 +38,7 @@ Esos niveles y `power_save=0` no se modifican sin documentar el motivo y añadir
 
 ## HISTORICAL
 
-No se ha volcado `amixer`, `wpctl` ni un archivo de `modprobe` a este repositorio. Los números de arriba vienen de la especificación de la usuaria, no de una lectura nueva de la mezcladora durante esta fase.
+No se ha volcado `amixer`, `wpctl` ni un archivo de `modprobe` a este repositorio. Los números de arriba son los previamente verificados en la instalación Archcraft, no una lectura nueva de la mezcladora durante esta fase.
 
 ## Qué no automatizar todavía
 

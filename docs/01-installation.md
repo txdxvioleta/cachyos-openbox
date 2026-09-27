@@ -2,7 +2,7 @@
 
 ## KNOWN
 
-La instalación de CachyOS todavía no forma parte de este repositorio. Esta fase solo deja documentos, listas y scripts inertes.
+La instalación de CachyOS todavía no forma parte de este repositorio. Los scripts de instalación no actúan. `scripts/00-check-system.sh` sí se puede ejecutar: solo lee el sistema.
 
 Orden obligatorio:
 
@@ -21,7 +21,7 @@ No habrá un único `install.sh`. Cada script de [`../scripts/`](../scripts/) cu
 
 - Definir el particionado y el arranque de la instalación limpia de CachyOS. No están especificados.
 - Definir el orden manual de instalación después de clasificar paquetes.
-- Decidir qué queda en el instalador de CachyOS y qué se añade después.
+- Comparar `packages-core.txt` con lo que ya instale CachyOS, para no reinstalar la base a ciegas.
 
 ## TO VERIFY
 

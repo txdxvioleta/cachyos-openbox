@@ -12,25 +12,28 @@ No aparecen como explícitos: `git`, `yarn`, un paquete `nvm`, `nodejs`, `typesc
 
 ## Decisión de diseño
 
-La lista provisional de desarrollo es la del archivo [`../packages/packages-development.txt`](../packages/packages-development.txt), con los nombres que se pidieron para CachyOS. No se sustituyen en silencio por el nombre de Archcraft. La diferencia queda como TO VERIFY.
+Node.js se gestiona con NVM. No se instala el paquete `nodejs` del sistema solo porque exista. Las versiones concretas dependen de cada proyecto. npm llega con el Node elegido por NVM. pnpm se instala aparte. Yarn solo entra si un proyecto lo necesita. TypeScript se agrega en el proyecto (`npm install -D typescript`), no como requisito del sistema.
 
-NVM, Yarn, el TypeScript global, Cursor y OpenCode no tienen nombre de paquete especificado para CachyOS. No se inventa uno y no entran en la lista provisional.
+Cursor y OpenCode siguen sin un nombre de paquete para CachyOS. No se inventa uno.
 
-Node.js de sistema no se añade como `nodejs` porque no se pidió ese paquete. La relación entre `npm`, `nodejs` y NVM queda abierta.
+Docker termina en Docker Engine más un solo Compose moderno. No se mantienen el plugin y el `docker-compose` legado a la vez por la instalación anterior. El nombre del paquete sigue sin verificar.
+
+La lista provisional está en [`../packages/packages-development.txt`](../packages/packages-development.txt). Esos nombres no se sustituyen en silencio por los de Archcraft.
 
 ## TODO
 
-- Decidir si Node.js se instala con NVM, con el paquete del sistema, o con ambos, y en qué orden respecto de npm, Yarn y pnpm.
+- Elegir el método de instalación de NVM en CachyOS. No hay paquete confirmado.
 - Elegir el método de Cursor y de OpenCode.
-- Confirmar si TypeScript se instala por proyecto o también de forma global.
+- Elegir, en la verificación, un solo paquete o plugin de Compose moderno.
 
 ## TO VERIFY
 
-- `docker-compose` frente al plugin Compose de Docker.
+- Nombre de paquete de NVM, si existe, frente a la instalación por el script oficial. No se fija aquí.
+- `docker-compose` frente al plugin Compose. Hace falta uno, no los dos.
 - `visual-studio-code` frente a `visual-studio-code-bin`.
 - `postman` frente a `postman-bin`.
 - `dbeaver` frente a `dbeaver-ce-bin`.
-- Si `npm` en CachyOS existe como paquete y si exige `nodejs`.
+- Si un paquete `npm` de CachyOS exige `nodejs` del sistema. El camino elegido es el npm que trae NVM.
 
 ## HISTORICAL
 

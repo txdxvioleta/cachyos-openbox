@@ -31,7 +31,7 @@ Fase 1: solo archivos del repositorio.
 - Nitrogen
 - Thunar y Tumbler
 - Kitty
-- Componentes XFCE sueltos: `xfsettingsd` (paquete `xfce4-settings`), `xfce4-power-manager`, `xfce-polkit`
+- Componentes XFCE sueltos: `xfsettingsd` (el paquete `xfce4-settings` entra solo por ese daemon), `xfce4-power-manager`, `xfce-polkit`. Eso no habilita una sesión XFCE.
 - NetworkManager y applet
 - Bluetooth: BlueZ, `bluez-utils`, Blueman
 - Audio: PipeWire + WirePlumber + ALSA, con `pavucontrol`
@@ -71,7 +71,7 @@ Conocido para esta máquina:
 
 Tecnologías previstas: React, React Native, TypeScript, JavaScript, Next.js, Node.js, NestJS, APIs REST, SQL, NoSQL y Docker.
 
-Herramientas previstas: Git, GitHub CLI, NVM, Node.js, npm, Yarn, pnpm, TypeScript, Docker, Docker Compose, VS Code, Cursor, OpenCode, Postman y DBeaver.
+Herramientas previstas: Git, GitHub CLI, NVM como gestor de Node, npm que viene con esa versión de Node, pnpm, Yarn solo si un proyecto lo pide, TypeScript por proyecto, Docker con Compose moderno, VS Code, Cursor, OpenCode, Postman y DBeaver. El nombre de la aplicación no confirma el nombre del paquete.
 
 PostgreSQL, Redis, MongoDB y MariaDB/MySQL se prefieren en Docker. No se crean servicios permanentes de bases de datos en el host salvo razón documentada.
 
@@ -79,7 +79,7 @@ PostgreSQL, Redis, MongoDB y MariaDB/MySQL se prefieren en Docker. No se crean s
 
 Stack: PipeWire + WirePlumber + ALSA.
 
-Valores conocidos como buenos:
+Valores previamente verificados en la instalación Archcraft:
 
 - Capture: 67 % y +14.25 dB
 - Rear Mic Boost: 0 dB
@@ -93,18 +93,18 @@ Valores conocidos como buenos:
 | Archivo | Papel en esta fase |
 | --- | --- |
 | `packages/archcraft-original-packages.txt` | Histórico literal. 459 nombres explícitos. Sin clasificación. |
-| `packages/packages-core.txt` | Provisional. Base del sistema nuevo. |
+| `packages/packages-core.txt` | Provisional. Estado objetivo después de instalar CachyOS, no una orden de reinstalar la base. |
 | `packages/packages-desktop.txt` | Provisional. Escritorio. |
 | `packages/packages-development.txt` | Provisional. Desarrollo. |
 | `packages/packages-databases.txt` | Provisional. Política Docker, sin servidores en el host. |
 | `packages/packages-applications.txt` | Provisional. Aplicaciones personales. |
-| `packages/packages-optional.txt` | Provisional. Ejemplos opcionales. |
+| `packages/packages-optional.txt` | Provisional. Uso diario, administración y rescate, en secciones distintas. El firewall queda aparte. |
 
 Ningún nombre de las listas nuevas se considera confirmado para los repositorios de CachyOS.
 
 ## Scripts
 
-Un script por responsabilidad, en [`scripts/`](scripts/). No hay un `install.sh` único. En esta fase cada script termina sin cambiar el sistema. Deben seguir siendo idempotentes cuando más adelante hagan algo.
+Un script por responsabilidad, en [`scripts/`](scripts/). No hay un `install.sh` único. `scripts/00-check-system.sh` solo lee el sistema. El resto, en esta fase, termina sin cambiar nada. Las decisiones fechadas están en [`docs/decisions.md`](docs/decisions.md).
 
 ## Configuración
 
@@ -137,4 +137,4 @@ Las reglas de trabajo para un agente están en [`AGENTS.md`](AGENTS.md). Este re
 
 ## Verificación
 
-Pendiente. [`scripts/99-verify.sh`](scripts/99-verify.sh) no comprueba el sistema todavía. Los puntos abiertos están marcados como TODO o TO VERIFY en `docs/`.
+[`scripts/00-check-system.sh`](scripts/00-check-system.sh) puede ejecutarse: solo informa. [`scripts/99-verify.sh`](scripts/99-verify.sh) todavía no es la suite de comprobación del sistema. Los puntos abiertos están marcados como TODO o TO VERIFY en `docs/`.

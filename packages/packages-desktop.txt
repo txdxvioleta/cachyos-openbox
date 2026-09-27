@@ -3,7 +3,8 @@
 # Intención para CachyOS. No es una lista definitiva.
 # Los nombres no están confirmados en los repositorios de CachyOS.
 # No instalar en la fase 1.
-# XFCE solo por los componentes indicados, no como sesión completa.
+# xfce4-settings se permite solo porque aporta xfsettingsd.
+# No instalar ni habilitar una sesión XFCE ni otros componentes de XFCE sin una razón explícita.
 
 xorg-server
 xorg-xinit
@@ -23,7 +24,7 @@ thunar
 tumbler
 kitty
 kitty-terminfo  # TO VERIFY: en Archcraft era un paquete explícito aparte. Confirmar si en CachyOS sigue separado.
-xfce4-settings  # TO VERIFY: debe aportar xfsettingsd sin arrastrar una sesión XFCE completa.
+xfce4-settings  # TO VERIFY: solo por xfsettingsd. No implica instalar XFCE ni habilitar su sesión.
 xfce4-power-manager
 xfce-polkit
 ksuperkey  # TO VERIFY: nombre y repositorio en CachyOS. En Archcraft el explícito era ksuperkey.

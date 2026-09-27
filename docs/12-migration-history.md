@@ -12,7 +12,7 @@ La migración parte de una lista real, no de una lista pendiente de aportar. [`.
 
 La lista histórica incluye paquetes que el entorno nuevo no quiere, por ejemplo `plank`, `tint2`, `mpd`, `mpc`, `ncmpcpp`, `lead`, `skippy-xd`, `light`, `alacritty` y `xfce4-terminal`. Se quedan en el archivo. La decisión de no migrarlos está en [`02-package-strategy.md`](02-package-strategy.md).
 
-También incluye `mariadb` y `mongodb-bin` en el host. La decisión nueva es Docker, documentada en [`08-development.md`](08-development.md) y en `packages/packages-databases.txt`.
+También incluye `mariadb` y `mongodb-bin` en el host. En esta Archcraft, `systemctl is-enabled mongodb` respondió `enabled`. La decisión nueva es Docker, no copiar ese servicio. Está documentada en [`08-development.md`](08-development.md) y en `packages/packages-databases.txt`.
 
 ## Decisión de diseño
 

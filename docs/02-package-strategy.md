@@ -6,7 +6,9 @@ Hay dos capas distintas.
 
 La capa histórica ya está disponible. No falta aportarla. Está en [`../packages/archcraft-original-packages.txt`](../packages/archcraft-original-packages.txt): 459 paquetes explícitos de Archcraft, de `7zip` a `zstd`, uno por línea, tal como los imprimió `pacman -Qqe`. Ese archivo no se clasifica, no se recorta, no se deduplica y no se reescribe. No es una lista de instalación. Es el baseline histórico.
 
-La capa nueva son los `packages-*.txt`. Son provisionales. Que un paquete aparezca en `packages-core.txt`, `packages-desktop.txt` o cualquier otra lista nueva no significa que el nombre ya esté validado para CachyOS.
+La capa nueva son los `packages-*.txt`. Son provisionales. Describen un estado objetivo: qué debería estar presente en CachyOS. No son una orden de instalar cada nombre, y el instalador de CachyOS ya puede haber dejado parte de la base. Que un paquete aparezca en `packages-core.txt`, `packages-desktop.txt` o cualquier otra lista nueva no significa que el nombre ya esté validado para CachyOS.
+
+`xfce4-settings` está en la lista de escritorio solo porque aporta `xfsettingsd`. No autoriza una sesión XFCE ni más componentes de XFCE.
 
 Un instalador futuro debe ignorar comentarios y el sufijo `# TO VERIFY: ...` de una línea. Hoy ningún script instala esas líneas.
 

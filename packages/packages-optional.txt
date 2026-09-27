@@ -1,25 +1,33 @@
 # PROVISIONAL
 # Clasificación prevista: OPTIONAL
-# Ejemplos indicados para el entorno nuevo. No son una lista definitiva.
+# Estado objetivo, no una orden de instalación.
 # Los nombres no están confirmados en los repositorios de CachyOS.
-# No instalar en la fase 1.
+# No instalar en esta fase.
 # Varios de estos nombres también están en la lista histórica de Archcraft.
 # Eso no los promueve a REQUIRED.
 
+# Uso diario
 htop
-nethogs
 ncdu
+nethogs
+xarchiver
+catfish
+galculator
+
+# Administración y troubleshooting
 nmap
 tcpdump
 smartmontools
 powertop
+gparted
 btrfs-progs
 btrfs-assistant
-gparted
+
+# Rescate y mantenimiento
 clonezilla
 fsarchiver
-ufw
-gufw
-xarchiver
-catfish
-galculator
+
+# Firewall: decisión aparte.
+# No instalar ufw ni gufw hasta saber qué firewall trae CachyOS.
+ufw  # TODO: decisión propia, no mezclarla con el resto de opcionales.
+gufw  # TODO: decisión propia, no mezclarla con el resto de opcionales.

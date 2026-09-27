@@ -1,8 +1,9 @@
 # PROVISIONAL
-# Clasificación prevista: REQUIRED
-# Intención para CachyOS. No es una lista definitiva.
+# Estado objetivo: estos paquetes deben estar presentes después de instalar CachyOS.
+# No es una orden de instalar cada línea encima del instalador.
+# base, linux y linux-firmware pueden llegar ya con la instalación de CachyOS.
 # Los nombres no están confirmados en los repositorios de CachyOS.
-# No instalar en la fase 1.
+# No instalar en esta fase.
 # Las líneas con # TO VERIFY necesitan comprobación concreta.
 # Procedencia de la intención: especificación del entorno nuevo, no copia de Archcraft.
 

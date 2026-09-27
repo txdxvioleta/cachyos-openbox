@@ -10,7 +10,7 @@ phase1_guard() {
 }
 
 install_terminal() {
-  # TODO: instalar Kitty y Zsh después de la prueba manual. No cambiar la shell de la usuaria en esta fase.
+  # TODO: instalar Kitty y Zsh después de la prueba manual. No cambiar la shell interactiva en esta fase.
   # No llamar a pacman, systemctl ni escribir fuera del repositorio.
   :
 }

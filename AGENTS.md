@@ -27,6 +27,8 @@ No introducir ni automatizar:
 
 XFCE solo mediante componentes sueltos ya decididos: `xfsettingsd`, `xfce4-power-manager`, `xfce-polkit` y Thunar.
 
+`xfce4-settings` se permite únicamente porque hace falta `xfsettingsd`. No instalar ni habilitar una sesión XFCE, ni otros componentes de XFCE, salvo una razón explícita escrita en este repositorio.
+
 Terminal principal: Kitty. Shell interactiva: Zsh. Super+T abre Kitty cuando exista la configuración de Openbox.
 
 ## Arquitectura de escritorio
@@ -44,6 +46,12 @@ La clasificación vive solo en:
 
 Esas listas nuevas son provisionales. Un nombre escrito ahí no es un nombre confirmado de CachyOS. Si hace falta duda, se marca TO VERIFY. No se copian paquetes desde la lista histórica de forma automática.
 
+`packages/packages-core.txt` describe el estado objetivo: paquetes que deben estar presentes después de instalar CachyOS. No es una orden de reinstalar `base`, `linux` o `linux-firmware` si el instalador ya los dejó. El nombre de una aplicación no es el nombre del paquete.
+
+Node.js se gestiona con NVM. No hace falta el paquete `nodejs` del sistema solo porque exista. npm llega con la versión de Node que elija NVM. pnpm se instala aparte. Yarn solo si un proyecto lo pide. TypeScript se instala por proyecto (`npm install -D typescript`), no con un paquete global del sistema.
+
+El destino de Compose es Docker Engine más Compose moderno. No se conservan a la vez el plugin y el `docker-compose` legado solo porque Archcraft tuviera `docker-compose`. El nombre exacto del paquete en CachyOS sigue en TO VERIFY.
+
 Categorías usadas fuera del archivo histórico:
 
 - REQUIRED
@@ -59,8 +67,9 @@ Bases de datos: PostgreSQL, Redis, MongoDB y MariaDB/MySQL en Docker. No crear s
 - Un script, una responsabilidad. No crear un `install.sh` gigante.
 - `#!/usr/bin/env bash` y `set -euo pipefail`.
 - Idempotentes cuando lleguen a modificar algo.
-- En la fase 1 el guardia inicial termina con código 2 y no llama a `pacman`, `systemctl` ni escribe en el sistema.
-- No ejecutar estos scripts para “probar” la instalación.
+- `scripts/00-check-system.sh` es de solo lectura y se puede ejecutar. Consulta el sistema (`/etc/os-release`, `pacman -Q`) y no instala ni escribe configuración.
+- El resto de los scripts, en esta fase, termina con código 2 y no llama a `pacman` ni a `systemctl`.
+- No ejecutar los scripts de instalación para probarlos. `00-check-system.sh` no es uno de ellos.
 
 ## Reglas de configuración
 
@@ -70,7 +79,7 @@ No dar por migrada una configuración que solo existe en el home de Archcraft.
 
 ## Audio
 
-Valores conocidos como buenos, dichos por la usuaria:
+Valores previamente verificados en la instalación Archcraft:
 
 - Capture: 67 % y +14.25 dB
 - Rear Mic Boost: 0 dB

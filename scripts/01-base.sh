@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Responsabilidad: Paquetes base provisionales de packages/packages-core.txt.
+# Responsabilidad: llevar el sistema al estado objetivo de packages/packages-core.txt, sin reinstalar a ciegas lo que el instalador de CachyOS ya haya dejado.
 # Idempotencia prevista: cuando este script llegue a modificar el sistema, debe poder repetirse sin duplicar cambios.
 # Fase 1: no modifica el sistema. Termina antes de cualquier acción.
 set -euo pipefail
@@ -10,7 +10,7 @@ phase1_guard() {
 }
 
 install_core_packages() {
-  # TODO: instalar packages-core.txt solo después de verificar nombres y probarlo a mano.
+  # TODO: después de verificar nombres, instalar solo lo que falte respecto del estado objetivo. No hacerlo en esta fase.
   # No llamar a pacman, systemctl ni escribir fuera del repositorio.
   :
 }

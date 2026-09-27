@@ -22,7 +22,7 @@ Kitty reemplaza a Alacritty y a XFCE Terminal como terminal principal. Zsh es la
 ## TO VERIFY
 
 - Si `kitty-terminfo` sigue siendo un paquete aparte en CachyOS. En Archcraft lo era.
-- Cómo se instalará Zsh como shell de la usuaria, sin hacerlo en esta fase.
+- Cómo se dejará Zsh como shell interactiva, sin hacerlo en esta fase.
 
 ## HISTORICAL
 
@@ -30,4 +30,4 @@ Kitty reemplaza a Alacritty y a XFCE Terminal como terminal principal. Zsh es la
 
 ## Qué no automatizar todavía
 
-Instalar Kitty o Zsh, cambiar la shell de la usuaria y escribir configuraciones.
+Instalar Kitty o Zsh, cambiar la shell interactiva y escribir configuraciones.
