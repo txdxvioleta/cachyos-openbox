@@ -1,0 +1,46 @@
+# PROVISIONAL
+# Clasificación prevista: REQUIRED
+# Intención para CachyOS. No es una lista definitiva.
+# Los nombres no están confirmados en los repositorios de CachyOS.
+# No instalar en la fase 1.
+# XFCE solo por los componentes indicados, no como sesión completa.
+
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xset
+xorg-xsetroot
+xorg-xev
+xorg-xkill
+xorg-xauth
+openbox
+polybar
+rofi
+picom
+dunst
+nitrogen
+thunar
+tumbler
+kitty
+kitty-terminfo  # TO VERIFY: en Archcraft era un paquete explícito aparte. Confirmar si en CachyOS sigue separado.
+xfce4-settings  # TO VERIFY: debe aportar xfsettingsd sin arrastrar una sesión XFCE completa.
+xfce4-power-manager
+xfce-polkit
+ksuperkey  # TO VERIFY: nombre y repositorio en CachyOS. En Archcraft el explícito era ksuperkey.
+networkmanager
+network-manager-applet
+nm-connection-editor
+bluez
+bluez-utils
+blueman
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+pavucontrol
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ranger
+zathura

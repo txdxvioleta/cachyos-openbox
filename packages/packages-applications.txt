@@ -1,0 +1,11 @@
+# PROVISIONAL
+# Clasificación prevista: REQUIRED para el uso personal pedido.
+# Intención para CachyOS. No es una lista definitiva.
+# Los nombres no están confirmados en los repositorios de CachyOS.
+# No instalar en la fase 1.
+
+discord
+spotify  # TO VERIFY: en Archcraft el explícito era spotify. Confirmar repositorio en CachyOS.
+steam  # TO VERIFY: no está en pacman -Qqe de Archcraft. Confirmar nombre y si hace falta multilib.
+brave  # TO VERIFY: en Archcraft el explícito era brave-bin, no brave.
+google-chrome  # TO VERIFY: en Archcraft el explícito era google-chrome. Confirmar repositorio en CachyOS.

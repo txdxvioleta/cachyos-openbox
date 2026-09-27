@@ -1,0 +1,12 @@
+# PROVISIONAL
+# Esta lista no es definitiva y no contiene servidores de bases de datos del host.
+# Decisión de diseño: PostgreSQL, Redis, MongoDB y MariaDB/MySQL van en Docker.
+# No hay tags ni nombres de imagen en esta fase. No se inventan.
+# No crear un servicio permanente en el host salvo razón documentada.
+#
+# HISTORICAL, solo como aviso, no como paquetes a instalar:
+# archcraft-original-packages.txt incluye mariadb y mongodb-bin.
+# Esos nombres no se copian aquí.
+#
+# TODO: elegir imágenes y un compose después de probarlos a mano.
+# TO VERIFY: si más adelante hace falta un cliente en el host. No está especificado.

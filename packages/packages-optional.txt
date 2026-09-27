@@ -1,0 +1,25 @@
+# PROVISIONAL
+# Clasificación prevista: OPTIONAL
+# Ejemplos indicados para el entorno nuevo. No son una lista definitiva.
+# Los nombres no están confirmados en los repositorios de CachyOS.
+# No instalar en la fase 1.
+# Varios de estos nombres también están en la lista histórica de Archcraft.
+# Eso no los promueve a REQUIRED.
+
+htop
+nethogs
+ncdu
+nmap
+tcpdump
+smartmontools
+powertop
+btrfs-progs
+btrfs-assistant
+gparted
+clonezilla
+fsarchiver
+ufw
+gufw
+xarchiver
+catfish
+galculator

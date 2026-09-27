@@ -1,0 +1,30 @@
+# PROVISIONAL
+# Clasificación prevista: REQUIRED
+# Intención para CachyOS. No es una lista definitiva.
+# Los nombres no están confirmados en los repositorios de CachyOS.
+# No instalar en la fase 1.
+# Las líneas con # TO VERIFY necesitan comprobación concreta.
+# Procedencia de la intención: especificación del entorno nuevo, no copia de Archcraft.
+
+base
+base-devel
+linux
+linux-firmware
+amd-ucode
+sudo
+git
+openssh
+curl
+wget
+vim
+nano
+less
+zsh
+bash
+zstd
+xz
+unzip
+zip
+7zip  # TO VERIFY: en Archcraft el explícito era 7zip. Confirmar el nombre en CachyOS.
+rsync
+jq

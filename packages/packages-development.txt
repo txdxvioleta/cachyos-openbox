@@ -1,0 +1,31 @@
+# PROVISIONAL
+# Clasificación prevista: REQUIRED
+# Intención para CachyOS. No es una lista definitiva.
+# Los nombres no están confirmados en los repositorios de CachyOS.
+# No instalar en la fase 1.
+# NVM, Yarn, TypeScript global, Cursor y OpenCode no tienen nombre de paquete especificado: no se listan aquí.
+
+git
+github-cli
+docker
+docker-compose  # TO VERIFY: en Archcraft el explícito era docker-compose. Confirmar si en CachyOS es ese paquete o el plugin Compose.
+npm  # TO VERIFY: no se asume que reemplace a nodejs ni a NVM. En Archcraft npm era explícito; nodejs no.
+pnpm
+python
+python-pip
+gcc
+make
+cmake
+pkgconf
+jq
+ripgrep
+fd
+fzf
+bat
+eza
+btop
+tree
+tmux
+postman  # TO VERIFY: en Archcraft el explícito era postman-bin, no postman.
+dbeaver  # TO VERIFY: en Archcraft el explícito era dbeaver-ce-bin, no dbeaver.
+visual-studio-code  # TO VERIFY: en Archcraft el explícito era visual-studio-code-bin, no visual-studio-code.
